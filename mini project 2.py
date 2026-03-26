@@ -7,4 +7,5 @@ class Participant:
         self.hand = []
         self.score = 0
 
-    
+    def add_card(self, card):
+        self.hand.append(card)
