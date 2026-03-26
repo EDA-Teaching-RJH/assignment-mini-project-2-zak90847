@@ -9,3 +9,9 @@ class Participant:
 
     def add_card(self, card):
         self.hand.append(card)
+
+class Player(Participant):
+    def __init__(self, name, balance=100):
+        super().__init__(name)
+        self.balance = balance
+        
