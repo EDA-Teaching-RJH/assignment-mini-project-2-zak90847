@@ -27,3 +27,10 @@ class Participant:
                 aces -= 1
             return score
 
+class Player(Participant):
+    def __init__(self, name, balance=100):
+        super().__init__(name)
+        self.balance = balance
+        
+
+
