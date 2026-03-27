@@ -22,3 +22,5 @@ class Participant:
                 else:
                     score += int(card)
 
+            
+
