@@ -55,4 +55,11 @@ def play_game:
 print(f"Welcome back! Your balance is: $(player.balance)")
 
 
-user_bet
+user_bet_input = input("Place your bet: ")
+is_valid, bet_result = validate bet(user_bet_input, player.balance)
+
+if not is_valid:
+    print(bet_result)
+    return
+
+player.add
