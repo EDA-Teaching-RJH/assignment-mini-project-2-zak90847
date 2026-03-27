@@ -107,3 +107,6 @@ elif d_score > 21 or p_score > d_score:
 elif p_score < d_score:
     print("Dealer wins.")
     player.balance -= bet
+else:
+     print("It's a push(tie).")
+
