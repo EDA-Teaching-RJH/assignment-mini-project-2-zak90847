@@ -81,4 +81,10 @@ def play_game():
          player.balance -= int(user_bet_input)
          save_balance(player.balance)
 
-    
+    while dealer.get_score() < 17
+        dealer.add_card(deck.pop())
+
+dealer = Dealer()
+dealer.add_card(deck.pop())
+dealer.add_card(deck.pop())
+print (f"Dealer's hand")
