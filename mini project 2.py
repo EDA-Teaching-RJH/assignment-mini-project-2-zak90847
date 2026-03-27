@@ -97,3 +97,13 @@ if player.get_score() <= 21
 p_score = player.get_score()
 d_score = dealer.get_score()
 bet =int(user_bet_input)
+
+if p_score > 21:
+     print("You busted! Dealer wins.")
+     player.balance -= bet
+elif d_score > 21 or p_score > d_score:
+     print("You win")
+     player.balance += bet
+elif p_score < d_score:
+    print("Dealer wins.")
+    player.balance -= bet
