@@ -31,6 +31,11 @@ class Player(Participant):
     def __init__(self, name, balance=100):
         super().__init__(name)
         self.balance = balance
-        
+
+class Dealer(Participant):
+    def __init__(self):
+        super().__init__("Dealer")
+
+
 
 
