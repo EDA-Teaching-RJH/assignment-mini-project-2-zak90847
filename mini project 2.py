@@ -69,48 +69,48 @@ def play_game():
          action = input("Do you want to (H)it or (S)tand? ").lower()
 
          if action == 'h' :
-              player.add_card(deck.pop())
-              print(f"Your hand: {player.hand} (Score: {player.get_score()})")
-            elif action == 's':
-              break
+            player.add_card(deck.pop())
+            print(f"Your hand: {player.hand} (Score: {player.get_score()})")
+         elif action == 's':
+            break
          else:
               print("Invalid input, please type 'H' or 'S' . ")
 
-    if player.get_score() > 21:
-         print("Bust! You went over 21.")
-         player.balance -= int(user_bet_input)
-         save_balance(player.balance)
+         if player.get_score() > 21:
+            print("Bust! You went over 21.")
+            player.balance -= int(user_bet_input)
+            save_balance(player.balance)
 
-    while dealer.get_score() < 17
-        dealer.add_card(deck.pop())
+            while dealer.get_score() < 17:
+                dealer.add_card(deck.pop())
 
-dealer = Dealer()
-dealer.add_card(deck.pop())
-dealer.add_card(deck.pop())
-print (f"Dealer's hand: {dealers.hand} (Score: {dealer.get_score()})")
+    dealer = Dealer()
+    dealer.add_card(deck.pop())
+    dealer.add_card(deck.pop())
+    print (f"Dealer's hand: {dealers.hand} (Score: {dealer.get_score()})")
 
-if player.get_score() <= 21
-    while dealer.get_score() < 17:
-         dealer.add_card(desk.pop())
-    print(f"Dealer's final hand: {dealer.hand} (Score: {dealer.get_score()})")
+    if player.get_score() <= 21:
+        while dealer.get_score() < 17:
+            dealer.add_card(desk.pop())
+        print(f"Dealer's final hand: {dealer.hand} (Score: {dealer.get_score()})")
 
-p_score = player.get_score()
-d_score = dealer.get_score()
-bet =int(user_bet_input)
+    p_score = player.get_score()
+    d_score = dealer.get_score()
+    bet =int(user_bet_input)
 
-if p_score > 21:
-     print("You busted! Dealer wins.")
-     player.balance -= bet
-elif d_score > 21 or p_score > d_score:
-     print("You win")
-     player.balance += bet
-elif p_score < d_score:
-    print("Dealer wins.")
-    player.balance -= bet
-else:
-     print("It's a push(tie).")
+    if p_score > 21:
+        print("You busted! Dealer wins.")
+        player.balance -= bet
+    elif d_score > 21 or p_score > d_score:
+        print("You win")
+        player.balance += bet
+    elif p_score < d_score:
+        print("Dealer wins.")
+        player.balance -= bet
+    else:
+        print("It's a push(tie).")
 
-save_balance(player.balance)
-print(f"New balance: ${player.balance}")
+    save_balance(player.balance)
+    print(f"New balance: ${player.balance}")
 
 play_game()
