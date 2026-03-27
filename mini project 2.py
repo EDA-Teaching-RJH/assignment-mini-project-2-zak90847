@@ -70,4 +70,9 @@ def play_game():
 
          if action == 'h' :
               player.add_card(deck.pop())
-              print(f"Your hand: {player.hand} (Score: {})")
+              print(f"Your hand: {player.hand} (Score: {player.get_score()})")
+            elif action == 's':
+              break
+         else:
+              print("Invalid input, please type 'H' or 'S' . ")
+              
