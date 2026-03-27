@@ -22,5 +22,8 @@ class Participant:
                 else:
                     score += int(card)
 
-            
+            while score > 21 and aces:
+                score -= 10
+                aces -= 1
+            return score
 
