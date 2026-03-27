@@ -94,3 +94,6 @@ if player.get_score() <= 21
          dealer.add_card(desk.pop())
     print(f"Dealer's final hand: {dealer.hand} (Score: {dealer.get_score()})")
 
+p_score = player.get_score()
+d_score = dealer.get_score()
+bet =int(user_bet_input)
