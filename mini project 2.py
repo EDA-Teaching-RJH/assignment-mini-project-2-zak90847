@@ -36,6 +36,10 @@ class Dealer(Participant):
     def __init__(self):
         super().__init__("Dealer")
 
-
+def load_balance():
+    if os.path.exists("save_games.txt"):
+        with open("save_game.txt, "r") as f :
+                  return int(f.read())
+    return 100
 
 
