@@ -75,4 +75,10 @@ def play_game():
               break
          else:
               print("Invalid input, please type 'H' or 'S' . ")
-              
+
+    if player.get_score() > 21:
+         print("Bust! You went over 21.")
+         player.balance -= int(user_bet_input)
+         save_balance(player.balance)
+
+    
