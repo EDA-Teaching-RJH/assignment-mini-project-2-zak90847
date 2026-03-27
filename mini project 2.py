@@ -7,13 +7,13 @@ class Participant:
         self.name = name
         self.hand = []
 
-        def add_card(self, card):
+    def add_card(self, card):
             self.hand.append(card)
         
-        def get_score(self):
+    def get_score(self):
             score = 0
             aces = 0
-            for card in self .hand:
+            for card in self.hand:
                 if card in ['J','Q','K']:
                     score+= 10
                 elif card == 'A':
@@ -37,29 +37,33 @@ class Dealer(Participant):
         super().__init__("Dealer")
 
 def load_balance():
-    if os.path.exists("save_games.txt"):
-        with open("save_game.txt, "r") as f :
+    if os.path.exists("save_game.txt"):
+        with open("save_game.txt", "r") as f :
                   return int(f.read())
     return 100
 
-def save_balance(balance)
-    with open("save_game.txt, "w") as f:
+def save_balance(balance):
+    with open("save_game.txt", "w") as f:
               f.write(str(balance))
 
-def play_game:
-    balance = load_balance(
+def play_game():
+    balance = load_balance()
     player = Player ("User", balance)
     deck = ['2','3','4','5','6','7','8','9','10','J','Q','K','A'] * 4
     random.shuffle(deck)
 
-print(f"Welcome back! Your balance is: $(player.balance)")
+    print(f"Welcome back! Your balance is: ${player.balance}")
 
 
-user_bet_input = input("Place your bet: ")
-is_valid, bet_result = validate bet(user_bet_input, player.balance)
+    user_bet_input = input("Place your bet: ")
+    is_valid, bet_result = validate_bet(user_bet_input, player.balance)
 
-if not is_valid:
-    print(bet_result)
-    return
+    if not is_valid:
+        print(bet_result)
+        return
 
-player.add
+    player.add_card(deck.pop()) 
+    player.add_card(deck.pop()) 
+    print(f"Your hand: {player.hand} (Score : {player.get_score()})")
+
+    while player.get_score() < 21:
