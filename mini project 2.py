@@ -52,3 +52,7 @@ def play_game:
     deck = ['2','3','4','5','6','7','8','9','10','J','Q','K','A'] * 4
     random.shuffle(deck)
 
+print(f"Welcome back! Your balance is: $(player.balance)")
+
+
+user_bet
