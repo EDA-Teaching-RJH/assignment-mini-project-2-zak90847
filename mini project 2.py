@@ -61,9 +61,13 @@ def play_game():
     if not is_valid:
         print(bet_result)
         return
-
     player.add_card(deck.pop()) 
     player.add_card(deck.pop()) 
     print(f"Your hand: {player.hand} (Score : {player.get_score()})")
 
     while player.get_score() < 21:
+         action = input("Do you want to (H)it or (S)tand? ").lower()
+
+         if action == 'h' :
+              player.add_card(deck.pop())
+              print(f"Your hand: {player.hand} (Score: {})")
