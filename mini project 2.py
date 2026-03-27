@@ -42,4 +42,8 @@ def load_balance():
                   return int(f.read())
     return 100
 
+def save_balance(balance)
+    with open("save_game.txt, "w") as f:
+              f.write(str(balance))
 
+def play_game:
