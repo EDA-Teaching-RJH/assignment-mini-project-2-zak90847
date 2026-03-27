@@ -13,4 +13,12 @@ class Participant:
         def get_score(self):
             score = 0
             aces = 0
-            
+            for card in self .hand:
+                if card in ['J','Q','K']:
+                    score+= 10
+                elif card == 'A':
+                    aces += 1
+                    score += 11
+                else:
+                    score += int(card)
+
