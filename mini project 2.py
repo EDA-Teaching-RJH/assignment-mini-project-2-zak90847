@@ -87,4 +87,10 @@ def play_game():
 dealer = Dealer()
 dealer.add_card(deck.pop())
 dealer.add_card(deck.pop())
-print (f"Dealer's hand")
+print (f"Dealer's hand: {dealers.hand} (Score: {dealer.get_score()})")
+
+if player.get_score() <= 21
+    while dealer.get_score() < 17:
+         dealer.add_card(desk.pop())
+    print(f"Dealer's final hand: {dealer.hand} (Score: {dealer.get_score()})")
+
