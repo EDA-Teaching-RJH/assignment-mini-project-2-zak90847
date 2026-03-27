@@ -110,3 +110,7 @@ elif p_score < d_score:
 else:
      print("It's a push(tie).")
 
+save_balance(player.balance)
+print(f"New balance: ${player.balance}")
+
+play_game()
